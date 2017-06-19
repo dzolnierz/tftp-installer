@@ -1,7 +1,7 @@
                   0fWelcome to Debian GNU/Linux!07                                09F107
 
-This is a Debian 8 (jessie) installation netboot image.
-It was built on 20150422+deb8u4+b1.
+This is a Debian 9 (stretch) installation netboot image.
+It was built on 20170615.
 
 0fHELP INDEX07
 
