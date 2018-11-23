@@ -30,9 +30,8 @@ net.ipv6.conf.lo.disable_ipv6 = 0
 EOF
 
 # Enable hotplug
-cat <<-EOF | tee /etc/udev/rules.d/80-hotplug-cpu-mem.rules
+cat <<-EOF | tee /etc/udev/rules.d/80-hotplug-cpu.rules
 SUBSYSTEM=="cpu", ACTION=="add", TEST=="online", ATTR{online}=="0", ATTR{online}="1"
-SUBSYSTEM=="memory", ACTION=="add", TEST=="state", ATTR{state}=="offline", ATTR{state}="online"
 EOF
 
 # Install Salt
