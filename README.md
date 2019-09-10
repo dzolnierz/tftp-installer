@@ -2,7 +2,7 @@
 
 Original netboot: http://ftp.debian.org/debian/dists/stretch/main/installer-amd64/current/images/netboot/
 
-Master branch is based on current stable Debian release. For previous realases please use debian/\<codename\> branches.
+Master branch is based on oldstable (Stretch) Debian release. For previous realases please use debian/\<codename\> branches.
 
 * [debian/jessie](https://github.com/dzolnierz/tftp-installer/tree/debian/jessie)
 
