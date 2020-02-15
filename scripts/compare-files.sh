@@ -11,6 +11,7 @@ TARGETS=(
 	"debian-installer/amd64/boot-screens/"
 	"debian-installer/amd64/grub/"
 	"debian-installer/amd64/bootnetx64.efi"
+	"debian-installer/amd64/grubx64.efi"
 	"debian-installer/amd64/initrd.gz"
 	"debian-installer/amd64/linux"
 	"debian-installer/amd64/pxelinux.0"
