@@ -5,6 +5,5 @@ Original netboot: http://ftp.debian.org/debian/dists/buster/main/installer-amd64
 Master branch is based on stable (Buster) Debian release. For previous realases please use debian/\<codename\> branches.
 
 * [debian/stretch](https://github.com/dzolnierz/tftp-installer/tree/debian/stretch)
-* [debian/jessie](https://github.com/dzolnierz/tftp-installer/tree/debian/jessie)
 
 Use at your own risk.
