@@ -7,4 +7,4 @@ Master branch is based on stable (Buster) Debian release. For previous realases 
 * [debian/stretch](https://github.com/dzolnierz/tftp-installer/tree/debian/stretch)
 * [debian/jessie](https://github.com/dzolnierz/tftp-installer/tree/debian/jessie)
 
-Use at your own risk. Preseed file for Buster is under development.
+Use at your own risk.
