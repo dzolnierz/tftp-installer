@@ -29,19 +29,19 @@ net.ipv6.conf.all.disable_ipv6 = 1
 net.ipv6.conf.lo.disable_ipv6 = 0
 EOF
 
-# Enable hotplug
-cat <<-EOF | tee /etc/udev/rules.d/80-hotplug-cpu.rules
-SUBSYSTEM=="cpu", ACTION=="add", TEST=="online", ATTR{online}=="0", ATTR{online}="1"
-EOF
+# Enable hotplug (needed on kernels > 3.10 and < 4.7)
+#cat <<-EOF | tee /etc/udev/rules.d/80-hotplug-cpu.rules
+#SUBSYSTEM=="cpu", ACTION=="add", TEST=="online", ATTR{online}=="0", ATTR{online}="1"
+#EOF
 
-# Install Salt
-SALT_VERSION="2017.7.8"
-SALT_PKG_VERSION="$SALT_VERSION+ds-1"
-echo "deb https://repo.saltstack.com/apt/debian/9/amd64/archive/$SALT_VERSION stretch main" | tee -a /etc/apt/sources.list.d/saltstack.list \
-	&& apt-get --no-install-recommends install apt-transport-https ca-certificates -y \
-	&& wget -O- "https://repo.saltstack.com/apt/debian/9/amd64/archive/$SALT_VERSION/SALTSTACK-GPG-KEY.pub" | apt-key add - \
-	&& apt-get update \
-	&& apt-get --no-install-recommends install salt-minion=$SALT_PKG_VERSION -y
+# Install Salt (optional)
+#SALT_VERSION="3002.2"
+#SALT_PKG_VERSION="$SALT_VERSION+ds-1"
+#echo "deb https://repo.saltstack.com/py3/debian/10/amd64/archive/$SALT_VERSION buster main" | tee -a /etc/apt/sources.list.d/saltstack.list \
+#	&& apt-get --no-install-recommends install apt-transport-https ca-certificates -y \
+#	&& wget -O- "https://repo.saltstack.com/py3/debian/10/amd64/archive/$SALT_VERSION/SALTSTACK-GPG-KEY.pub" | apt-key add - \
+#	&& apt-get update \
+#	&& apt-get --no-install-recommends install salt-minion=$SALT_PKG_VERSION -y
 
 # Put your local addons below:
 #
