@@ -19,6 +19,7 @@ TARGETS=(
 IGNORE=(
 	"debian-installer/amd64/boot-screens/adtxt.cfg"
 	"debian-installer/amd64/boot-screens/menu.cfg"
+	"debian-installer/amd64/boot-screens/syslinux.cfg"
 )
 
 filelist=()
