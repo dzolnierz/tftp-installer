@@ -1,3 +1,4 @@
+netinstall/**
 scripts/**
 !**.template
 !compare-files.sh

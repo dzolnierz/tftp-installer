@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+CWD="${BASH_SOURCE%/*}"
+
 DIRS=(
 	"${1}"
 	"${2}"
@@ -19,7 +21,6 @@ TARGETS=(
 IGNORE=(
 	"debian-installer/amd64/boot-screens/adtxt.cfg"
 	"debian-installer/amd64/boot-screens/menu.cfg"
-	"debian-installer/amd64/boot-screens/syslinux.cfg"
 )
 
 filelist=()
@@ -43,3 +44,8 @@ for file in "${filelist[@]}"; do
 		[[ "${AUTOUPDATE}" == "yes" ]] && cp -av "${2}/${file}" "${1}/${file}"
 	fi
 done
+[[ "${AUTOUPDATE}" == "yes" ]] && {
+	patch="../../../patches/syslinux.cfg.patch"
+	cd "${CWD}/../debian-installer/amd64/boot-screens"
+	patch -p0 < "${patch}"
+}

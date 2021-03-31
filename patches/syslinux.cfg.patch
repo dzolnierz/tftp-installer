@@ -1,0 +1,9 @@
+--- syslinux.cfg.orig	2021-03-31 08:31:06.912578510 +0200
++++ syslinux.cfg	2021-03-31 08:28:26.239761954 +0200
+@@ -4,4 +4,5 @@
+ include debian-installer/amd64/boot-screens/menu.cfg
+ default debian-installer/amd64/boot-screens/vesamenu.c32
+ prompt 0
+-timeout 0
++timeout 50
++totaltimeout 600
